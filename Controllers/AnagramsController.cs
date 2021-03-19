@@ -30,9 +30,7 @@ namespace AnagramBritAZ.Controllers
         {
             IQueryable<Anagram> wordDictionary = db.Anagrams;
             var finalWordList = new List<string>();
-            
             Anagram finallAnagram = new Anagram { };
-
             string inputWordOrdered = String.Concat(word.OrderBy(a => a));
             string tempString = "";
             string unorderedTempString = "";
@@ -41,11 +39,9 @@ namespace AnagramBritAZ.Controllers
             {
                 unorderedTempString = w.Name;
                 tempString = String.Concat(w.Name.OrderBy(a => a));
-
                 if(inputWordOrdered == tempString)
                 {
                     finalWordList.Add(unorderedTempString);
-
                 }
             }
             
@@ -53,7 +49,6 @@ namespace AnagramBritAZ.Controllers
             {
                 wordDictionary = wordDictionary.Where(a => a.Name.Contains(word));
             }
-
             return View(finalWordList);
         }
 
@@ -63,14 +58,11 @@ namespace AnagramBritAZ.Controllers
             var amountOfPossibleAnagramLocations = longString.Length - anagramLength + 1;
             var substringIndexes = Enumerable.Range(0, amountOfPossibleAnagramLocations);
             int count = 0;
-
             foreach(var index in substringIndexes)
             {
                 var substring = longString.Substring(index, anagramLength);
-
                 if (IsAnagramOf(substring, word))
                     count++;
-
             }
 
             return View(count);
@@ -80,9 +72,7 @@ namespace AnagramBritAZ.Controllers
         {
             var word1Sorted = String.Concat(word1.OrderBy(c => c));
             var word2Sorted = String.Concat(word2.OrderBy(c => c));
-
             return word1Sorted == word2Sorted;
         }
-
     }
 }
