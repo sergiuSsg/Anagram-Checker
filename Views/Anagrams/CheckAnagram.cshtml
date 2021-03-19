@@ -1,0 +1,19 @@
+﻿@model List<string>
+
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@foreach (var word in Model)
+{
+    <span>@word </span>
+}
+<br />
+<br />
+@Html.ActionLink("Go Back", "Index", "Home", null, new { @class = "btn btn-default" })
+
+
+

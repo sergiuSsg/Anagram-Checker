@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Exercise 1</h2>
+        <p>
+            Lists all English words (from the database) that are anagrams of the input string.
+        </p>
+        @Html.ActionLink("List all the Anagrams", "Check", "Anagrams", null, new { @class = "btn btn-default"})
+    </div>
+    <br /><br /><br />
+    <div class="col-md-12">
+        <h2>Exercise 2</h2>
+        <p>
+            Shows the number of times that the word from input 2 or an anagram of Input 2 appears as a word and anagrams in Input 1
+        </p>
+         @Html.ActionLink("Find the Anagrams", "Find", "Anagrams", null, new { @class = "btn btn-default"})
+    </div>
+</div>
+
+<hr />
+<footer>
+    <p>&copy; @DateTime.Now.Year - Anagram Application</p>
+</footer>

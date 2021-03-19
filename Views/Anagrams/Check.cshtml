@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Exercise1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List all of the Matching Anagrams</h2>
+
+
+@using (Html.BeginForm("CheckAnagram", "Anagrams", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+{
+    <div class="form-group">
+        @Html.TextBox("word", null, new { @class = "form-control", @placeholder = "Enter a word" })
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+}

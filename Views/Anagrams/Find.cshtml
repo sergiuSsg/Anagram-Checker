@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Exercise2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Find the Anagrams</h2>
+
+
+@using (Html.BeginForm("FindAnagram", "Anagrams", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+{
+    <div class="form-group">
+        @Html.TextBox("longString", null, new { @class = "form-control", @placeholder = "Enter long string" })
+    </div>
+    <div class="form-group">
+        @Html.TextBox("word", null, new { @class = "form-control", @placeholder = "Enter a word" })
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+}
+
