@@ -34,8 +34,8 @@ Output = 3
 
 Explanation - from left to right
 
-thegodsanddogsweredogged
+theGODsanddogsweredogged
 
-thegodsanddogsweredogged
+thegodsandDOGsweredogged
 
-thegodsanddogsweredogged
+thegodsanddogswereDOGged
